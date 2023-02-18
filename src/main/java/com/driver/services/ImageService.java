@@ -20,7 +20,7 @@ public class ImageService {
 
         image.setDescription(description);
         image.setDimensions(dimensions);
-        image.setBlog(blog);
+//        image.setBlog(blog);
 
         blog.getImageList().add(image);
 

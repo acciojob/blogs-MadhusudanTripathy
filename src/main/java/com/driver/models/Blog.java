@@ -16,7 +16,7 @@ public class Blog{
     private String title;
     private String content;
 
-    @CreationTimestamp
+    @CreationTimestamp//?
     private Date pubDate;
 
     @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
@@ -28,7 +28,7 @@ public class Blog{
 
     public Blog() {
         imageList=new ArrayList<>();
-        pubDate=new Date();
+        pubDate=new Date();// Had To Add This Line Else NullPointerError Occured
     }
 
 
