@@ -27,15 +27,10 @@ public class Blog{
     private User user;
 
     public Blog() {
+        imageList=new ArrayList<>();
     }
 
-    public Blog(String title, String content, User user) {
-        imageList = new ArrayList<>();
-        this.title = title;
-        this.content = content;
-        this.pubDate = new Date();
-        this.user = user;
-    }
+
     public int getId() {
         return id;
     }

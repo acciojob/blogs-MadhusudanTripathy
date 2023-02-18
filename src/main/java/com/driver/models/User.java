@@ -15,22 +15,18 @@ public class User{
         @Column(unique = true)
         private String username;
         private String password;
-        private String firstname="test";
-        private String lastname="test";
+        private String firstname;
+        private String lastname;
 
         @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
         private List<Blog> blogList = new ArrayList<>();
 
         public User() {
-
+                firstname="test";
+                lastname="test";
                 blogList = new ArrayList<>();
         }
-        public User(String username, String password) {
-                blogList = new ArrayList<>();
 
-                this.username = username;
-                this.password = password;
-        }
 
         public int getId() {
                 return id;
