@@ -28,6 +28,7 @@ public class Blog{
 
     public Blog() {
         imageList=new ArrayList<>();
+        pubDate=new Date();
     }
 
 
