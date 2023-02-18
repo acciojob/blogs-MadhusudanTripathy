@@ -20,12 +20,13 @@ public class ImageService {
 
         image.setDescription(description);
         image.setDimensions(dimensions);
+        image.setBlog(blog);
 
         blog.getImageList().add(image);
 
         blogRepository2.save(blog);
 
-        return null;
+        return image;
     }
 
     public void deleteImage(Integer id){
@@ -40,13 +41,11 @@ public class ImageService {
 
         int imageX=Integer.parseInt(imageXY[0]);
         int imageY=Integer.parseInt(imageXY[1]);
-        int imageArea=imageX*imageY;
 
         int screenX=Integer.parseInt(screenXY[0]);
         int screenY=Integer.parseInt(screenXY[1]);
-        int screenArea=screenX*screenY;
 
-        int count=screenArea/imageArea;
+        int count=(screenX/imageX)*(screenY/imageY);
 
 
         return count;

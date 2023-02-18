@@ -24,6 +24,12 @@ public class Image{
         return id;
     }
 
+    public Image(String description, String dimensions, Blog blog) {
+        this.description = description;
+        this.dimensions = dimensions;
+        this.blog = blog;
+    }
+
     public void setId(int id) {
         this.id = id;
     }

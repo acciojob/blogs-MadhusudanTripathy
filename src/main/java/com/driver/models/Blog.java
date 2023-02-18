@@ -20,7 +20,7 @@ public class Blog{
     private Date pubDate;
 
     @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
-    private List<Image> imageList=new ArrayList<>();
+    private List<Image> imageList;
 
     @ManyToOne
     @JoinColumn
@@ -29,7 +29,13 @@ public class Blog{
     public Blog() {
     }
 
-
+    public Blog(String title, String content, User user) {
+        imageList = new ArrayList<>();
+        this.title = title;
+        this.content = content;
+        this.pubDate = new Date();
+        this.user = user;
+    }
     public int getId() {
         return id;
     }
